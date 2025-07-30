@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo Vigor de Acero - Recupera tu Confianza y Vigor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #212529;
+            background-color: #F4F4F4;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #0A2463;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #FF9A00;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 154, 0, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 154, 0, 0.4);
+        }
+
+        .btn-large {
+            padding: 20px 40px;
+            font-size: 1.2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .problem p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .solution h2 {
+            color: #FF9A00;
+            margin-bottom: 1.5rem;
+        }
+
+        .solution p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background-color: #FF9A00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .benefit-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #0A2463;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .benefit-item p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #FF9A00;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: serif;
+        }
+
+        .testimonial blockquote {
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            padding-left: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #0A2463;
+            text-align: right;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background-color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px 0;
+            background-color: #0A2463;
+            color: white;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .problem, .solution, .benefits, .testimonials, .cta {
+                padding: 60px 0;
+            }
+
+            .benefits-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .btn-large {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+
+            .problem, .solution, .benefits, .testimonials, .cta {
+                padding: 40px 0;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SECCIÓN 1: HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Recupera tu Confianza y Vigor: El Método Natural para una Potencia Masculina Inquebrantable</h1>
+            <p>Deja atrás la frustración y la duda. Descubre el sistema paso a paso para tomar el control de tu cuerpo y de tu vida íntima.</p>
+            <a href="<!-- INSERTE AQUÍ SU ENLACE DE CHECKOUT DE CLICKBANK -->" class="btn btn-large">¡SÍ, QUIERO ACCESO INMEDIATO!</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: PROBLEMA / CONEXIÓN -->
+    <section class="problem">
+        <div class="container">
+            <p>Si estás cansado de buscar soluciones rápidas que no funcionan, de sentir que tu confianza disminuye y de no entender por qué tu cuerpo no responde como antes, quiero que sepas algo: no estás solo, y no es tu culpa. Has sido bombardeado con información contradictoria que solo ataca los síntomas, no la raíz del problema.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: PRESENTACIÓN DE LA SOLUCIÓN -->
+    <section class="solution">
+        <div class="container">
+            <h2>La Solución Definitiva: Protocolo Vigor de Acero</h2>
+            <p>Por eso hemos creado el <strong>Protocolo Vigor de Acero</strong>. No es otro truco mágico. Es un sistema completo, basado en la ciencia, diseñado para reactivar tu potencia desde adentro hacia afuera, de forma natural y permanente. Es el mapa que te devolverá el control.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: BENEFICIOS / MÓDULOS -->
+    <section class="benefits">
+        <div class="container">
+            <h2>¿Qué Descubrirás Dentro del Protocolo?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Los 3 Pilares de una erección fuerte</h3>
+                    <p>Y cómo fortalecer cada uno de ellos.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🍎</div>
+                    <h3>El protocolo de alimentación exacto</h3>
+                    <p>Qué comer para disparar tu testosterona y limpiar tus arterias.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💪</div>
+                    <h3>La rutina de ejercicios de 10 minutos al día</h3>
+                    <p>Para fortalecer tu mecánica eréctil.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Las técnicas mentales</h3>
+                    <p>Para eliminar la ansiedad por rendimiento y construir una confianza de acero.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: PRUEBA SOCIAL (TESTIMONIOS) -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes:</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <blockquote>Pensé que ya no había solución para mí. Seguí el módulo de alimentación y ejercicios y la diferencia en mi energía y confianza es increíble. Gracias.</blockquote>
+                    <div class="testimonial-author">- Juan P., 52 años</div>
+                </div>
+                <div class="testimonial">
+                    <blockquote>La parte de la mentalidad fue lo que cambió todo. La ansiedad desapareció. Este protocolo me devolvió mucho más que solo mi potencia.</blockquote>
+                    <div class="testimonial-author">- Carlos M., 47 años</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: CTA FINAL -->
+    <section class="cta">
+        <div class="container">
+            <h2>¿Estás listo para dejar de buscar y empezar a solucionar?</h2>
+            <p>Toma el control hoy mismo y únete a los cientos de hombres que ya han transformado sus vidas.</p>
+            <a href="<!-- INSERTE AQUÍ SU ENLACE DE CHECKOUT DE CLICKBANK -->" class="btn btn-large">¡SÍ, QUIERO MI ACCESO AHORA!</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Protocolo Vigor de Acero. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html> 

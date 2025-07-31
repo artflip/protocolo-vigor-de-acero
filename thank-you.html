@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por tu Compra! - Protocolo Vigor de Acero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #212529;
+            background-color: #F4F4F4;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #0A2463;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #FF9A00;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 154, 0, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 154, 0, 0.4);
+        }
+
+        .btn-large {
+            padding: 20px 40px;
+            font-size: 1.2rem;
+        }
+
+        .btn-secondary {
+            background-color: #0A2463;
+            box-shadow: 0 4px 15px rgba(10, 36, 99, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background-color: #081a4a;
+            box-shadow: 0 6px 20px rgba(10, 36, 99, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            color: #FF9A00;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Download Section */
+        .download {
+            padding: 80px 0;
+            background-color: white;
+            text-align: center;
+        }
+
+        .download-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border: 3px solid #FF9A00;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(255, 154, 0, 0.1);
+        }
+
+        .download-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            background-color: #FF9A00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .download-box h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #0A2463;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .download-box p {
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+
+        /* Next Steps Section */
+        .next-steps {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .step-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 20px;
+            background-color: #FF9A00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .step-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #0A2463;
+            margin-bottom: 1rem;
+        }
+
+        .step-item p {
+            color: #6c757d;
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        /* Support Section */
+        .support {
+            padding: 80px 0;
+            background-color: white;
+            text-align: center;
+        }
+
+        .support-box {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px 0;
+            background-color: #0A2463;
+            color: white;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .download, .next-steps, .support {
+                padding: 60px 0;
+            }
+
+            .download-box {
+                padding: 30px 20px;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .btn-large {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+
+            .download, .next-steps, .support {
+                padding: 40px 0;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SECCIÓN 1: HERO DE AGRADECIMIENTO -->
+    <section class="hero">
+        <div class="container">
+            <h1>¡Gracias por tu Compra!</h1>
+            <p>Felicidades por dar el primer paso hacia una vida más plena y confiada. Tu Protocolo Vigor de Acero está listo para descargar.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: DESCARGA DEL PDF -->
+    <section class="download">
+        <div class="container">
+            <h2>Tu Protocolo Está Listo</h2>
+            <div class="download-box">
+                <div class="download-icon">📖</div>
+                <h3>Protocolo Vigor de Acero</h3>
+                <p>Descarga tu guía completa con todos los secretos para recuperar tu vigor y confianza de forma natural y permanente.</p>
+                <a href="#" class="btn btn-large" onclick="downloadPDF()">📥 DESCARGAR PDF AHORA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: PRÓXIMOS PASOS -->
+    <section class="next-steps">
+        <div class="container">
+            <h2>¿Qué Hacer Ahora?</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4>Descarga tu PDF</h4>
+                    <p>Guarda el archivo en tu dispositivo para acceder cuando quieras.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h4>Lee el protocolo</h4>
+                    <p>Dedica tiempo a entender cada módulo antes de comenzar.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h4>Comienza hoy mismo</h4>
+                    <p>No esperes más. Tu transformación comienza ahora.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h4>Mantén la consistencia</h4>
+                    <p>Los resultados vienen con la aplicación constante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: SOPORTE -->
+    <section class="support">
+        <div class="container">
+            <h2>¿Necesitas Ayuda?</h2>
+            <div class="support-box">
+                <p>Si tienes alguna pregunta sobre el protocolo o necesitas soporte, no dudes en contactarnos. Estamos aquí para ayudarte en tu camino hacia el éxito.</p>
+                <a href="mailto:soporte@protocolovigordeacero.com" class="btn btn-secondary">📧 CONTACTAR SOPORTE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Protocolo Vigor de Acero. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function downloadPDF() {
+            // Aquí você pode adicionar a lógica para download do PDF
+            // Por exemplo, redirecionar para um link de download ou abrir em nova aba
+            alert('Função de download será implementada. Por favor, configure o link do PDF.');
+            
+            // Exemplo de como seria com um link real:
+            // window.open('https://seu-link-do-pdf.com/protocolo-vigor-de-acero.pdf', '_blank');
+        }
+    </script>
+</body>
+</html> 
